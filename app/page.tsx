@@ -228,34 +228,46 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1: Zane on Fire Digital */}
             <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-slate-200">
-              <div className="aspect-video bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
-                <div className="text-center text-white p-6">
-                  <svg className="w-20 h-20 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                  <p className="font-semibold">Screenshot Coming Soon</p>
-                </div>
+              <div className="aspect-video relative overflow-hidden">
+                <Image
+                  src="/zaneonfire-screenshot.png"
+                  alt="Zane on Fire Digital - Agency Website Screenshot"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
                   Zane on Fire Digital
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Agency website featuring an intelligent lead generation chatbot powered by Claude AI. Automatically qualifies prospects and books consultations.
+                  Modern agency website with intelligent lead qualification chatbot. Demonstrates bold creative design and AI-powered customer engagement.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">Next.js</span>
-                  <span className="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm font-medium rounded-full">Anthropic API</span>
-                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-full">Tailwind</span>
+                  <span className="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm font-medium rounded-full">React</span>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-700 text-sm font-medium rounded-full">Anthropic API</span>
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-full">Tailwind CSS</span>
                 </div>
-                <a
-                  href="https://zaneonfire.digital"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow duration-200"
-                >
-                  View Live Site
-                </a>
+                <div className="flex gap-3">
+                  <a
+                    href="https://zaneonfire.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow duration-200"
+                  >
+                    View Live
+                  </a>
+                  <a
+                    href="https://github.com/Entelechyon/zaneonfire"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors duration-200"
+                  >
+                    View Code
+                  </a>
+                </div>
               </div>
             </div>
 
