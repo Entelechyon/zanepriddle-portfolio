@@ -331,7 +331,7 @@ export default function Home() {
                   Sarah Mitchell Consulting
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Professional consulting website with AI lead qualification chatbot. Intelligent assistant qualifies prospects, educates about services, handles objections, and schedules discovery calls—converting visitors into qualified leads 24/7 through conversion-focused design.
+                  Professional services website with intelligent lead qualification chatbot. Showcases B2B solutions with automated client screening and appointment booking.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">Next.js</span>
