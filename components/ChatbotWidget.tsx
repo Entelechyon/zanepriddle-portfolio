@@ -118,7 +118,7 @@ export default function ChatbotWidget() {
 
       {/* Chat Widget Window */}
       <div
-        className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 max-h-[70vh] sm:max-h-[600px] max-w-md bg-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 z-50 border border-slate-200 ${
+        className={`fixed bottom-20 left-4 right-4 sm:bottom-24 sm:left-auto sm:right-6 sm:w-96 max-h-[70vh] sm:max-h-[600px] max-w-md bg-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 z-50 border border-slate-200 ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
         }`}
         style={{ height: 'min(70vh, 500px)' }}
