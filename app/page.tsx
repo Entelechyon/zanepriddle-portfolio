@@ -287,7 +287,7 @@ export default function Home() {
                   Bella Vista Italian Restaurant
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Elegant restaurant website featuring authentic Italian hospitality. Showcases traditional menu, family recipes, and fine dining experience in Melbourne.
+                  Elegant restaurant website with sophisticated design and seamless user experience. Features menu presentation, location details, and authentic Italian branding that captures the warmth of traditional hospitality.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">Next.js</span>
@@ -331,7 +331,7 @@ export default function Home() {
                   Sarah Mitchell Consulting
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Professional business consulting website showcasing expertise in transforming businesses. Features clean design, clear value proposition, and strategic consultation booking flow.
+                  Professional consulting website with conversion-focused design and strategic messaging. Features compelling hero section, clear value proposition, and streamlined consultation booking that positions the consultant as the expert choice.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">Next.js</span>
