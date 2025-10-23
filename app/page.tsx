@@ -275,7 +275,7 @@ export default function Home() {
             <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-slate-200">
               <div className="aspect-video relative overflow-hidden">
                 <Image
-                  src="/Bella-Vista-screenshot.png"
+                  src="/bella-vista-screenshot.png"
                   alt="Bella Vista Italian Restaurant - Website Screenshot"
                   width={800}
                   height={450}
@@ -315,34 +315,47 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Project 3: Consultant Website */}
-            <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden border border-slate-200 opacity-75">
-              <div className="aspect-video bg-gradient-to-br from-orange-600 to-yellow-500 flex items-center justify-center">
-                <div className="text-center text-white p-6">
-                  <svg className="w-20 h-20 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                  <p className="font-semibold">Coming Soon</p>
-                </div>
+            {/* Project 3: Sarah Mitchell Consulting */}
+            <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-slate-200">
+              <div className="aspect-video relative overflow-hidden">
+                <Image
+                  src="/sarah-mitchell-screenshot.png"
+                  alt="Sarah Mitchell Consulting - Website Screenshot"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                  Consultant Website
+                  Sarah Mitchell Consulting
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Professional consulting website with AI-powered chatbot for lead qualification, appointment booking, and FAQ handling.
+                  Professional business consulting website showcasing expertise in transforming businesses. Features clean design, clear value proposition, and strategic consultation booking flow.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-orange-100 text-orange-700 text-sm font-medium rounded-full">Next.js</span>
-                  <span className="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-medium rounded-full">Anthropic</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">Next.js</span>
+                  <span className="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm font-medium rounded-full">React</span>
                   <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-full">TypeScript</span>
                 </div>
-                <button
-                  disabled
-                  className="w-full px-6 py-3 bg-slate-300 text-slate-500 font-semibold rounded-lg cursor-not-allowed"
-                >
-                  Coming Soon
-                </button>
+                <div className="flex gap-3">
+                  <a
+                    href="https://sarah-mitchell-consultant.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow duration-200"
+                  >
+                    View Live
+                  </a>
+                  <a
+                    href="https://github.com/Entelechyon/sarah-mitchell-consultant"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors duration-200"
+                  >
+                    View Code
+                  </a>
+                </div>
               </div>
             </div>
           </div>
