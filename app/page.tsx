@@ -271,34 +271,44 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Project 2: Restaurant Website */}
-            <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden border border-slate-200 opacity-75">
-              <div className="aspect-video bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
+            {/* Project 2: Bella Vista Restaurant */}
+            <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-slate-200">
+              <div className="aspect-video bg-gradient-to-br from-amber-700 via-yellow-600 to-amber-500 flex items-center justify-center">
                 <div className="text-center text-white p-6">
-                  <svg className="w-20 h-20 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                  <p className="font-semibold">Coming Soon</p>
+                  <h4 className="text-3xl font-serif font-bold mb-2">Bella Vista</h4>
+                  <p className="text-lg opacity-90">Authentic Italian Dining</p>
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                  Restaurant Website
+                  Bella Vista Italian Restaurant
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Modern restaurant website with online menu, reservations, and AI assistant to answer customer questions about menu items and allergens.
+                  Elegant restaurant website featuring authentic Italian hospitality. Showcases traditional menu, family recipes, and fine dining experience in Melbourne.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">Next.js</span>
-                  <span className="px-3 py-1 bg-pink-100 text-pink-700 text-sm font-medium rounded-full">Claude AI</span>
-                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-full">Tailwind</span>
+                  <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">Next.js</span>
+                  <span className="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-medium rounded-full">React</span>
+                  <span className="px-3 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-full">Tailwind CSS</span>
                 </div>
-                <button
-                  disabled
-                  className="w-full px-6 py-3 bg-slate-300 text-slate-500 font-semibold rounded-lg cursor-not-allowed"
-                >
-                  Coming Soon
-                </button>
+                <div className="flex gap-3">
+                  <a
+                    href="https://bella-vista-chi.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-6 py-3 bg-gradient-to-r from-amber-600 to-yellow-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow duration-200"
+                  >
+                    View Live
+                  </a>
+                  <a
+                    href="https://github.com/Entelechyon/bella-vista"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors duration-200"
+                  >
+                    View Code
+                  </a>
+                </div>
               </div>
             </div>
 
