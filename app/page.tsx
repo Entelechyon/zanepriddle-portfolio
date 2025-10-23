@@ -273,11 +273,14 @@ export default function Home() {
 
             {/* Project 2: Bella Vista Restaurant */}
             <div className="bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-slate-200">
-              <div className="aspect-video bg-gradient-to-br from-amber-700 via-yellow-600 to-amber-500 flex items-center justify-center">
-                <div className="text-center text-white p-6">
-                  <h4 className="text-3xl font-serif font-bold mb-2">Bella Vista</h4>
-                  <p className="text-lg opacity-90">Authentic Italian Dining</p>
-                </div>
+              <div className="aspect-video relative overflow-hidden">
+                <Image
+                  src="/Bella-Vista-screenshot.png"
+                  alt="Bella Vista Italian Restaurant - Website Screenshot"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
