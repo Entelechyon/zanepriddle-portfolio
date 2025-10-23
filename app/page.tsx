@@ -287,7 +287,7 @@ export default function Home() {
                   Bella Vista Italian Restaurant
                 </h3>
                 <p className="text-slate-700 mb-4 leading-relaxed">
-                  Elegant restaurant website with sophisticated design and seamless user experience. Features menu presentation, location details, and authentic Italian branding that captures the warmth of traditional hospitality.
+                  Elegant restaurant website with AI-powered reservation chatbot. Intelligent assistant handles menu questions, dietary restrictions, and conversational booking while showcasing authentic Italian ambiance through sophisticated design.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">Next.js</span>
