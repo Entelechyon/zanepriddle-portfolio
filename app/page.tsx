@@ -75,7 +75,7 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-              <span className="text-xl">I&apos;m Zane Priddle, a web developer based in Melbourne who specializes in creating websites that actually work for your business.</span> While other developers build digital brochures, I build revenue machines.
+              <span className="text-xl">I&apos;m Zane Priddle, a web developer based in Melbourne who specialises in creating websites that actually work for your business.</span> While other developers build digital brochures, I build revenue machines.
             </p>
             <p className="text-lg text-slate-700 mb-6 leading-relaxed">
               My approach is simple: combine clean, modern web design with intelligent AI chatbots that handle your customer interactions around the clock. No more missed opportunities because you couldn&apos;t respond fast enough. No more losing leads to competitors with better online systems.
@@ -121,7 +121,7 @@ export default function Home() {
             What I Build
           </h2>
           <p className="text-xl text-slate-600 text-center mb-12 max-w-3xl mx-auto">
-            Specialized services to help your business succeed online
+            Specialised services to help your business succeed online
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -149,7 +149,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Optimized for conversions</span>
+                  <span>Optimised for conversions</span>
                 </li>
               </ul>
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>SEO optimized</span>
+                  <span>SEO optimised</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
