@@ -296,7 +296,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-3">
                   <a
-                    href="https://bella-vista-chi.vercel.app/"
+                    href="https://bella-vista.xyz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 text-center px-6 py-3 bg-gradient-to-r from-amber-600 to-yellow-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow duration-200"
@@ -340,7 +340,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-3">
                   <a
-                    href="https://sarah-mitchell-consulting.vercel.app/"
+                    href="https://www.sarahmitchell.online/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-shadow duration-200"
