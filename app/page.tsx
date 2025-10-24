@@ -394,7 +394,9 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://www.upwork.com/freelancers/~01a7d8d4fd98753c3f"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg hover:bg-green-50 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -404,7 +406,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-600">Upwork Profile</p>
-                    <p className="font-semibold text-slate-900 group-hover:text-green-600">View Profile (Add Later)</p>
+                    <p className="font-semibold text-slate-900 group-hover:text-green-600">View Upwork Profile</p>
                   </div>
                 </a>
               </div>
