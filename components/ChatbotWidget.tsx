@@ -10,6 +10,13 @@ interface Message {
 interface LeadInfo {
   name?: string;
   email?: string;
+  phone?: string;
+  company?: string;
+  projectType?: string;
+  budget?: string;
+  message?: string;
+  priority?: string;
+  submitted?: boolean;
 }
 
 export default function ChatbotWidget() {
@@ -27,6 +34,58 @@ export default function ChatbotWidget() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const submitLeadToWebhook = async (lead: LeadInfo) => {
+    const webhookUrl = 'https://script.google.com/macros/s/AKfycbzp-rmGWIw3hF3kJ2-aTS16u9_063EvojzTFA3SxHnyU6eWAUGE7o6orxToskd1ZcOGEQ/exec';
+
+    const payload = {
+      name: lead.name || '',
+      email: lead.email || '',
+      phone: lead.phone || '',
+      company: lead.company || '',
+      projectType: lead.projectType || '',
+      budget: lead.budget || '',
+      message: lead.message || '',
+      priority: lead.priority || 'Medium',
+      timestamp: new Date().toISOString(),
+    };
+
+    console.log('🌐 WEBHOOK CALL STARTED');
+    console.log('📍 URL:', webhookUrl);
+    console.log('📦 Payload:', payload);
+
+    try {
+      await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'no-cors', // Google Apps Script requires this
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      console.log('✅ Lead submitted to Google Sheets successfully');
+      console.log('💾 Data sent:', payload);
+      return true;
+    } catch (error) {
+      console.error('Failed to submit lead to webhook:', error);
+
+      // Store in localStorage as backup
+      try {
+        const backupLeads = JSON.parse(localStorage.getItem('pendingLeads') || '[]');
+        backupLeads.push({
+          ...lead,
+          timestamp: new Date().toISOString(),
+        });
+        localStorage.setItem('pendingLeads', JSON.stringify(backupLeads));
+        console.log('Lead saved to localStorage backup');
+      } catch (storageError) {
+        console.error('Failed to save to localStorage:', storageError);
+      }
+
+      return false;
+    }
+  };
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -72,9 +131,55 @@ export default function ChatbotWidget() {
       setMessages((prev) => [...prev, assistantMessage]);
 
       // Check if the assistant captured lead info
+      console.log('🔍 API Response:', { hasLeadInfo: !!data.leadInfo, leadInfo: data.leadInfo });
+
       if (data.leadInfo) {
-        setLeadInfo((prev) => ({ ...prev, ...data.leadInfo }));
-        console.log('Lead info captured:', { ...leadInfo, ...data.leadInfo });
+        const updatedLeadInfo = { ...leadInfo, ...data.leadInfo };
+        setLeadInfo(updatedLeadInfo);
+        console.log('📝 Lead info updated:', updatedLeadInfo);
+        console.log('✅ Has name:', !!updatedLeadInfo.name);
+        console.log('✅ Has email:', !!updatedLeadInfo.email);
+        console.log('✅ Has projectType:', !!updatedLeadInfo.projectType);
+        console.log('✅ Already submitted:', !!updatedLeadInfo.submitted);
+
+        // Check if we have minimum required info and haven't submitted yet
+        if (
+          updatedLeadInfo.name &&
+          updatedLeadInfo.email &&
+          updatedLeadInfo.projectType &&
+          !updatedLeadInfo.submitted
+        ) {
+          console.log('🚀 MINIMUM LEAD INFO COLLECTED - SUBMITTING TO WEBHOOK...');
+          console.log('📤 Payload:', {
+            name: updatedLeadInfo.name,
+            email: updatedLeadInfo.email,
+            phone: updatedLeadInfo.phone,
+            company: updatedLeadInfo.company,
+            projectType: updatedLeadInfo.projectType,
+            budget: updatedLeadInfo.budget,
+            message: updatedLeadInfo.message,
+            priority: updatedLeadInfo.priority,
+          });
+
+          const success = await submitLeadToWebhook(updatedLeadInfo);
+
+          if (success) {
+            console.log('✅ WEBHOOK SUBMISSION SUCCESSFUL - Marking as submitted');
+            // Mark as submitted to avoid duplicate submissions
+            setLeadInfo((prev) => ({ ...prev, submitted: true }));
+          } else {
+            console.log('❌ WEBHOOK SUBMISSION FAILED');
+          }
+        } else {
+          console.log('⏳ Waiting for more info:', {
+            needName: !updatedLeadInfo.name,
+            needEmail: !updatedLeadInfo.email,
+            needProjectType: !updatedLeadInfo.projectType,
+            alreadySubmitted: updatedLeadInfo.submitted,
+          });
+        }
+      } else {
+        console.log('ℹ️ No lead info in this response');
       }
     } catch (error) {
       console.error('Error sending message:', error);
