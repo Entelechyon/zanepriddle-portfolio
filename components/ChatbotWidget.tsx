@@ -36,7 +36,7 @@ export default function ChatbotWidget() {
   }, [messages]);
 
   const submitLeadToWebhook = async (lead: LeadInfo) => {
-    const webhookUrl = 'https://script.google.com/macros/s/AKfycbzp-rmGWIw3hF3kJ2-aTS16u9_063EvojzTFA3SxHnyU6eWAUGE7o6orxToskd1ZcOGEQ/exec';
+    const webhookUrl = 'https://script.google.com/macros/s/AKfycbyjNzqYAUBO2xFUUVyxq8QqStY1aA468DVQP916iHGS9G56ThqNd0fWIEauNaSlsyzf4Q/exec';
 
     const payload = {
       name: lead.name || '',
